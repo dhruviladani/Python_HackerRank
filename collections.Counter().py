@@ -17,13 +17,11 @@ for i in range(m):
 # print(l2)
 ans = 0
 for i in l2:
-    for x,y in count.items():
-        
-        if int(y) > 0 and i[0] == x :
-            count[x] -= 1
-            # print(count[x])
-            ans = ans + i[1]
-            # print(ans)
+    if i[0] in count.keys() and count[i[0]] > 0 :
+        count[i[0]] -= 1
+        # print(count[x])
+        ans = ans + i[1]
+        # print(ans)
     
 print(ans)
 
