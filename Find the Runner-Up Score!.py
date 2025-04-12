@@ -17,3 +17,24 @@ if __name__ == '__main__':
             break
             
     print(ans)
+
+
+
+# 2nd method -----------------
+
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    
+    arr = list(arr)
+    
+    arr1 = sorted(arr,reverse=True)
+    
+    for i in range (0, len(arr)) :
+        if (arr1[i] == arr1[i+1]):
+            continue
+        else:
+            print(arr1[i+1])
+            break
+        
